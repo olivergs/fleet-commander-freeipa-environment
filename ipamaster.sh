@@ -9,14 +9,6 @@ echo "Updating system"
 dnf update -y
 echo ""
 
-echo "Enabling COPR repository for FreeIPA Desktop profile"
-dnf copr enable ogutierrez/freeipa-desktop-profile -y
-echo ""
-
-echo "Cleaning DNF cache"
-dnf clean all -y
-echo ""
-
 echo "Installing needed packages"
 dnf install -y @freeipa-server oddjob-mkhomedir freeipa-desktop-profile
 echo ""
